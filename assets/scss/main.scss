@@ -12,7 +12,7 @@ body {
 }
 
 .container {
-  max-width: 1100px;
+  max-width: 90%;
   margin: 0 auto;
 }
 a {
@@ -50,6 +50,14 @@ header {
   }
 }
 
+@media screen (max-width: 400px) {
+    .weird-hidden {
+        display: none;
+    }
+}
+    
+}
+
 @media screen and (max-width: 720px) {
   .sm-hidden {
     display: none;
@@ -58,11 +66,15 @@ header {
 // MARK: MAIN
 
 main {
+    background-image: url(../images/background.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 70vw;
+
   .container {
     min-height: 90vh;
     display: flex;
     flex-direction: column;
-    background-color: orange;
     align-items: start;
     justify-content: center;
     gap: 40px;
@@ -70,7 +82,7 @@ main {
   h1 {
     font: {
       family: "GT Super", serif;
-      size: 110px;
+      size: calc(10vw + 10px);
       weight: 400;
     }
     letter-spacing: -3px;
@@ -85,10 +97,37 @@ main {
   }
 }
 
+footer {
+  padding: 20px;
+  border-top: 1px solid black;
+
+  nav {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+}
+
 @media screen and (max-width: 900px) {
   main {
     .btn {
       background: #1a8917;
     }
   }
+
+  // MARK: FOOTER
+footer {
+    background: black;
+    color: white;
+  
+    nav {
+      justify-content: start;
+    }
+  
+    .lg-hidden {
+      display: none;
+    }
+  }
+  
 }
+

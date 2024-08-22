@@ -1,91 +1,17 @@
-@font-face {
-  font-family: "GT Super";
-  src: url(../fonts/gt-super-400-normal.woff);
-}
-@font-face {
-  font-family: "Sohne";
-  src: url(../fonts/sohne-400-normal.woff);
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* Error: expected "{".
+ *    ,
+ * 53 | @media screen (max-width: 400px) {
+ *    |               ^
+ *    '
+ *   assets/scss/main.scss 53:15  root stylesheet */
 
-body {
-  font-family: "Sohne", sans-serif;
-  background-color: #f7f4ed;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: expected "{".\a    \2577 \a 53 \2502  @media screen (max-width: 400px) {\a    \2502                ^\a    \2575 \a   assets/scss/main.scss 53:15  root stylesheet';
 }
-
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.btn {
-  background: black;
-  padding: 8px 16px;
-  border-radius: 20px;
-  color: white;
-  border: none;
-}
-
-header {
-  padding: 20px;
-  border-bottom: 1px solid black;
-  font-size: 14px;
-}
-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-header .logo {
-  height: 30px;
-}
-header nav {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
-@media screen and (max-width: 720px) {
-  .sm-hidden {
-    display: none;
-  }
-}
-main .container {
-  min-height: 90vh;
-  display: flex;
-  flex-direction: column;
-  background-color: orange;
-  align-items: start;
-  justify-content: center;
-  gap: 40px;
-}
-main h1 {
-  font-family: "GT Super", serif;
-  font-size: 110px;
-  font-weight: 400;
-  letter-spacing: -3px;
-  line-height: 0.9;
-}
-main p {
-  font-size: 22px;
-}
-main .btn {
-  font-size: 22px;
-}
-
-@media screen and (max-width: 900px) {
-  main .btn {
-    background: #1a8917;
-  }
-}
-
-/*# sourceMappingURL=style.css.map */
