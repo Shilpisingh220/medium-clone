@@ -32,6 +32,7 @@ a {
   padding: 8px 16px;
   border-radius: 20px;
   color: white;
+  border: none;
 }
 
 header {
@@ -58,11 +59,33 @@ header nav {
     display: none;
   }
 }
-main {
-  min-height: 80vh;
+main .container {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  background-color: orange;
+  align-items: start;
+  justify-content: center;
+  gap: 40px;
 }
 main h1 {
   font-family: "GT Super", serif;
+  font-size: 110px;
+  font-weight: 400;
+  letter-spacing: -3px;
+  line-height: 0.9;
+}
+main p {
+  font-size: 22px;
+}
+main .btn {
+  font-size: 22px;
+}
+
+@media screen and (max-width: 900px) {
+  main .btn {
+    background: #1a8917;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

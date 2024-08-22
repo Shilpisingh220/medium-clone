@@ -12,8 +12,8 @@ body {
 }
 
 .container {
-    max-width: 1100px;
-    margin: 0 auto;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 a {
   text-decoration: none;
@@ -24,23 +24,21 @@ a {
   padding: 8px 16px;
   border-radius: 20px;
   color: white;
+  border: none;
 }
 
 // MARK: HEADER
 header {
- 
- padding: 20px;
-  
+  padding: 20px;
+
   border-bottom: 1px solid black;
-  
+
   font-size: 14px;
 
-
-  .container{
+  .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
   }
   .logo {
     height: 30px;
@@ -60,8 +58,37 @@ header {
 // MARK: MAIN
 
 main {
-    min-height: 80vh;
-    h1 {
-        font-family: "GT Super" , serif;
+  .container {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    background-color: orange;
+    align-items: start;
+    justify-content: center;
+    gap: 40px;
+  }
+  h1 {
+    font: {
+      family: "GT Super", serif;
+      size: 110px;
+      weight: 400;
     }
+    letter-spacing: -3px;
+    line-height: 0.9;
+  }
+
+  p {
+    font-size: 22px;
+  }
+  .btn {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  main {
+    .btn {
+      background: #1a8917;
+    }
+  }
 }
